@@ -1,9 +1,9 @@
 * {
     scroll-behavior: smooth;
-    accent-color: hsl(343, 100%, 65%);
+    accent-color: hsl(25, 100%, 66%);
 }
 *::selection {
-    background-color: hsl(343, 100%, 65%);
+    background-color: hsl(25, 100%, 66%);
     color: white;
 };
 
