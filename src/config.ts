@@ -3,3 +3,6 @@
 
 export const SITE_TITLE = 'Porky\'s Pot of Pollution.';
 export const SITE_DESCRIPTION = 'The World\'s Biggest Polluter';
+
+
+export let darkMode = false
