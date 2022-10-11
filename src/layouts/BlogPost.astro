@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import '../styles/blog.css'
 
 export interface Props {
 	content: {
@@ -38,7 +39,7 @@ const {
 					/>
 				)}
 				<h1 class="font-bold font-headliner text-3xl p-4 underline underline-offset-1">{title}</h1>
-				<h1 class="font-semibold font-primary text-2xl pl-4">{author}</h1>
+				<h1 class="font-semibold font-primary text-2xl pl-4"> by {author}</h1>
 				{pubDate && <time class="p-4">{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				<hr/>

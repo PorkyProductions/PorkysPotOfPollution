@@ -102,7 +102,7 @@ export default () => {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-primary text-CCHSwhite' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-theme-fire text-white' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
                           </a>
@@ -112,7 +112,7 @@ export default () => {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-primary text-CCHSwhite' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-theme-fire text-white' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Settings
                           </a>
@@ -122,7 +122,7 @@ export default () => {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-primary text-CCHSwhite' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-theme-fire text-white' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
                           </a>

@@ -17,3 +17,11 @@ a,
     @apply text-transparent bg-clip-text;
     @apply bg-gradient-to-br ;
 }
+
+.flexCenter {
+    @apply flex content-center justify-center
+}
+
+.flexBetween {
+    @apply flex content-center justify-between
+}

@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import 'bootstrap/dist/css/bootstrap.css'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./data/*.{md,mdx}")).sort(
@@ -20,20 +21,19 @@ const posts = (await Astro.glob("./data/*.{md,mdx}")).sort(
   <body>
     <Header />
     <main class="bg-theme-darkRed">
-      <section class="">
-        <ul class="grid grid-cols-2 portrait:grid portrait:grid-cols-1">
+      <section class="m-auto">
+        <ul class="grid grid-cols-3 portrait:grid-cols-1 p-4">
           {
             posts.map((post) => (
               <li>
-                <div class="rounded-lg bg-white dark:bg-black dark:text-white shadow-md shadow-gray-300 p-4">
-					          <img src={post.frontmatter.heroImage} alt="" class="m-auto p-4" /> 
-                  <a class="font-headliner text-3xl" href={post.url}>
-                    {post.frontmatter.title}
-                  </a>
-                  <p class="font-bold font-primary">
-                    {post.frontmatter.author}
-                  </p>
-                  <time datetime={post.frontmatter.pubDate}>
+                <div class="card p-4" style="width: 18rem;">
+                  <img src={post.frontmatter.heroImage} class="card-img-top" alt="the main image of the article">
+                  <div class="card-body">
+                    <a href={post.url} class="card-title font-headliner card-link">{post.frontmatter.title}</a>
+                    <p class="font-bold font-primary card-subtitle text-black">
+                      by {post.frontmatter.author}
+                    </p>
+                    <time class="card-text text-md text-black" datetime={post.frontmatter.pubDate}>
                     {new Date(post.frontmatter.pubDate).toLocaleDateString(
                       "en-us",
                       {
@@ -43,7 +43,9 @@ const posts = (await Astro.glob("./data/*.{md,mdx}")).sort(
                       }
                     )}
                   </time>
-                  <p class="p-4">{post.frontmatter.description}</p>
+                    <p class="card-text text-black">{post.frontmatter.description}</p>
+                    <a href={post.url} class="btn btn-primary">Read</a>
+                  </div>
                 </div>
               </li>
             ))
