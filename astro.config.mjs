@@ -10,5 +10,5 @@ import vue from "@astrojs/vue";
 export default defineConfig({
   integrations: [svelte(), tailwind(), prefetch(), vue()],
   site: "https://porkyproductions.github.io",
-  base: "/PorkysPotOfPollution/"
+  base: "/PorkysPotOfPollution/",
 });
