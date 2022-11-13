@@ -1,15 +1,14 @@
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
-import svelte from "@astrojs/svelte";
 
+// https://astro.build/config
+import svelte from "@astrojs/svelte";
+import tailwind from "@astrojs/tailwind";
+import prefetch from "@astrojs/prefetch";
 import vue from "@astrojs/vue";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://porkyproductions.github.io',
-  integrations: [mdx(), sitemap(), tailwind(), react(), svelte(), vue()],
-  base: '/PorkysPotOfPollution'
+  integrations: [svelte(), tailwind(), prefetch(), vue()],
+  site: "https://porkyproductions.github.io",
+  base: "/PorkysPotOfPollution/"
 });
