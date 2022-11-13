@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "bootstrap/dist/css/bootstrap.css";
+import Footer from "../components/footer.svelte";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./data/*.{md,mdx}")).sort(
@@ -42,6 +43,19 @@ const posts = (await Astro.glob("./data/*.{md,mdx}")).sort(
                     >
                       {post.frontmatter.title}
                     </a>
+                <div class="card p-4" style="width: 18rem;">
+                  <img
+                    src={post.frontmatter.heroImage}
+                    class="card-img-top"
+                    alt="the main image of the article"
+                  />
+                  <div class="card-body">
+                    <a
+                      href={post.url}
+                      class="card-title font-headliner card-link"
+                    >
+                      {post.frontmatter.title}
+                    </a>
                     <p class="font-bold font-primary card-subtitle text-black">
                       by {post.frontmatter.author}
                     </p>
@@ -72,6 +86,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx}")).sort(
         </ul>
       </section>
     </main>
+    <Footer/>
     <style></style>
   </body>
 </html>
