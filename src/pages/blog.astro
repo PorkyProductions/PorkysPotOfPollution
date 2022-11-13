@@ -23,16 +23,15 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
     <main class="bg-theme-darkRed">
       <section class="m-auto">
         <ul class="grid grid-cols-3 portrait:grid-cols-1 p-4">
-          {posts.map((post) => (
+          {
+            posts.map((post) => (
               <li>
                 <div class="card p-4" style="width: 300px;">
                   <div style="justify-content:center">
                     <img
                       src={post.frontmatter.heroImage}
-                      
                       alt="the main image of the article"
                       style="max-height:100px; max-width: 100px;display: block;margin-left: auto; margin-right: auto;"
-  
                     />
                   </div>
                   <div class="card-body" style="height: 200px">
@@ -42,14 +41,18 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
                     >
                       {post.frontmatter.title}
                     </a>
-                    <p class="p-4 text-size: 18px">{post.frontmatter.description}</p>
-
+                    <p class="p-4 text-size: 18px">
+                      {post.frontmatter.description}
+                    </p>
                   </div>
-                  <br>
+                  <br />
                   <p class="font-bold font-primary">
                     {post.frontmatter.author}
                   </p>
-                  <time datetime={post.frontmatter.pubDate} style="font-size: 12px">
+                  <time
+                    datetime={post.frontmatter.pubDate}
+                    style="font-size: 12px"
+                  >
                     {new Date(post.frontmatter.pubDate).toLocaleDateString(
                       "en-us",
                       {
@@ -61,11 +64,12 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
                   </time>
                 </div>
               </li>
-            ))}
+            ))
+          }
         </ul>
       </section>
     </main>
-    <Footer/>
+    <Footer />
     <style></style>
   </body>
 </html>
