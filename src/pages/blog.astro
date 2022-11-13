@@ -42,7 +42,23 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
                     >
                       {post.frontmatter.title}
                     </a>
+                    <p class="p-4 text-size: 18px">{post.frontmatter.description}</p>
+
                   </div>
+                  <br>
+                  <p class="font-bold font-primary">
+                    {post.frontmatter.author}
+                  </p>
+                  <time datetime={post.frontmatter.pubDate} style="font-size: 12px">
+                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                      "en-us",
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }
+                    )}
+                  </time>
                 </div>
               </li>
             ))}
