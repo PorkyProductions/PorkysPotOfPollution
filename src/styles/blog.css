@@ -70,7 +70,6 @@ td {
 	
 img { 
 	border: none;
-	max-width: 100%;
 }
 	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
 	
