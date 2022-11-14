@@ -5,6 +5,7 @@ author: "Tristan Winata, Ryan Mullin"
 description: "A complte and total running list of all things that we hate"
 updatedDate: "Nov 12 2022"
 heroImage: "/HedgehogIcon.png"
+rating: 0
 ---
 
 | Thing        | Date Added|  Added By  |
