@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "../components/footer.svelte";
+import StarRater from "../components/starRater.svelte";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
@@ -74,42 +75,25 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
                       </time>
                     </span>
                     <!--star rating system-->
-                      <span id="rating" >{post.frontmatter.rating}</span>
-                      <span class="float-child"style="float:right;margin-left: auto; margin-right: 0;">
+                    <StarRater numOfStars={post.frontmatter.rating}/>
 
-                        <span class="fa fa-star" id="star1"></span>
-                        <span class="fa fa-star" id="star2"></span>
-                        <span class="fa fa-star" id="star3"></span>
-                        <span class="fa fa-star" id="star4"></span>
-                        <span class="fa fa-star" id="star5"></span>
-                      </span>
                   </div>
                 </div>
               </li>
+
             ))
           }
         </ul>
       </section>
     </main>
     <Footer />
+    
     <style>
       .checked {
          color: darkgoldenrod;
       }
       
     </style>
-    <script>
-      //
-      var rating = document.getElementById("rating").textContent;
-      
-      //star rating system
-      for(var i = 1; i <=5; i++){
-        var starObj = document.getElementById("star" + i);
-        if(parseInt(rating) >= i){
-          starObj.classList.add("checked");
-        }
-      }
-      
-    </script>
+    
   </body>
 </html>
