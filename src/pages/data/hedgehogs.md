@@ -4,7 +4,7 @@ title: "Hedgehogs, the best thing ever."
 author: "Tristan Winata"
 description: ""
 updatedDate: "Nov 12 2022"
-heroImage: "/HedgehogIcon.png"
+heroImage: "/PorkysPotOfPollution/HedgehogIcon.png"
 rating: 5
 ---
 

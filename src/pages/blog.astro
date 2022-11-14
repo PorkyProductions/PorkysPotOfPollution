@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "../components/footer.svelte";
 import StarRater from "../components/starRater.svelte";
-
+import 'font-awesome/css/font-awesome.css'
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
   (a, b) =>
@@ -20,7 +20,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
       title={"Blog"}
       description={"The Blog of Porkys Pot of Pollution"}
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
   <body>
     <main class="bg-theme-darkRed">
@@ -46,14 +46,14 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
                     >
                       {post.frontmatter.title}
                     </a>
-                    <p class="p-4 text-size: 18px">
+                    <p class="p-4 text-sm">
                       {post.frontmatter.description}
                     </p>
                   </div>
                   <br />
                   <!--author of article -->
                   <p class="font-bold font-primary">
-                      {post.frontmatter.author}
+                      <span class="dark:font-medium font-normal">by </span>{post.frontmatter.author}
                     </p>
                   <div class="float-container">
                     <!--date / last updated-->

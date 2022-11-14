@@ -3,12 +3,19 @@
     import { onMount } from 'svelte';
     let a = 0;
 
-    let starChecks1 = (numOfStars >= 1)? "checked": "";
-    let starChecks2 = (numOfStars >= 2)? "checked": "";
-    let starChecks3 = (numOfStars >= 3)? "checked": "";
-    let starChecks4 = (numOfStars >= 4)? "checked": "";
-    let starChecks5 = (numOfStars >= 5)? "checked": "";
+    let starChecks1 = (numOfStars >= 1) ? "checked": "";
+    let starChecks2 = (numOfStars >= 2) ? "checked": "";
+    let starChecks3 = (numOfStars >= 3) ? "checked": "";
+    let starChecks4 = (numOfStars >= 4) ? "checked": "";
+    let starChecks5 = (numOfStars >= 5) ? "checked": "";
     
+    onMount(() => {
+        starChecks1 = 0
+        starChecks2 = 0
+        starChecks3 = 0
+        starChecks4 = 0
+        starChecks5 = 0
+    })
     
 </script>
 <div>

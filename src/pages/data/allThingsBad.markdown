@@ -4,7 +4,7 @@ title: "All things that are bad."
 author: "Porky Productions"
 description: "A complte and total running list of all things that we hate"
 updatedDate: "Nov 12 2022"
-heroImage: "/HedgehogIcon.png"
+heroImage: "/PorkysPotOfPollution/HedgehogIcon.png"
 rating: 1
 ---
 
