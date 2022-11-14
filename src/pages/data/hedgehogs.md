@@ -3,6 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Hedgehogs, the best thing ever."
 author: "Tristan Winata"
 description: ""
+pubDate: "11/12/2022"
 updatedDate: "Nov 12 2022"
 heroImage: "/PorkysPotOfPollution/HedgehogIcon.png"
 rating: 5

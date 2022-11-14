@@ -3,6 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "All things that are bad."
 author: "Porky Productions"
 description: "A complte and total running list of all things that we hate"
+pubDate: "11/12/2022"
 updatedDate: "Nov 12 2022"
 heroImage: "/PorkysPotOfPollution/HedgehogIcon.png"
 rating: 1
