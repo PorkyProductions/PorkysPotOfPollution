@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "All things that are bad."
-author: "Tristan Winata, Ryan Mullin"
+author: "Porky Productions"
 description: "A complte and total running list of all things that we hate"
 updatedDate: "Nov 12 2022"
 heroImage: "/HedgehogIcon.png"
