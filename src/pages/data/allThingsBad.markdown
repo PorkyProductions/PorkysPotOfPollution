@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "All things that are bad."
+title: "All Bad Things"
 author: "Porky Productions"
 description: "A complte and total running list of all things that we hate"
 pubDate: "11/12/2022"

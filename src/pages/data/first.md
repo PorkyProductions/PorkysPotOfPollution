@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Lipsum: the overlooked template nonsense language."
+title: "Lorem Ipsum"
 author: "Ryan Mullin"
 description: "Lorem Ipsum Dolor Sit Amet."
 pubDate: "8/11/2022"

@@ -18,18 +18,19 @@
     })
     
 </script>
-<div>
-<span class="float-child"style="float:right;margin-left: auto; margin-right: 0;"></span>
+<span style="float:right">
+    <span class="float-child"style="float:right;margin-left: auto; margin-right: 0;"></span>
 
-<span class="fa fa-star {starChecks1}" id="star1"></span>
-<span class="fa fa-star {starChecks2}" id="star2"></span>
-<span class="fa fa-star {starChecks3}" id="star3"></span>
-<span class="fa fa-star {starChecks4}" id="star4"></span>
-<span class="fa fa-star {starChecks5}" id="star5"></span>
-</div>
+    <span class="fa fa-star {starChecks1}" id="star1"></span>
+    <span class="fa fa-star {starChecks2}" id="star2"></span>
+    <span class="fa fa-star {starChecks3}" id="star3"></span>
+    <span class="fa fa-star {starChecks4}" id="star4"></span>
+    <span class="fa fa-star {starChecks5}" id="star5"></span>
+</span>
+
 <style>
     .checked {
-       color: darkgoldenrod;
+       color: rgb(255, 196, 0);
     }
     
   </style>

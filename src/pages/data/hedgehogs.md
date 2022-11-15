@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Hedgehogs, the best thing ever."
+title: "Hedgehogs"
 author: "Tristan Winata"
 description: ""
 pubDate: "11/12/2022"

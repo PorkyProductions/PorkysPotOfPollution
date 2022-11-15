@@ -31,56 +31,57 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
           {
             posts.map((post) => (
               <li>
-                <div class="card p-4" style="width: 300px;">
-                  <!--image of article-->
-                  <div style="justify-content:center">
-                    <img
-                      src={post.frontmatter.heroImage}
-                      alt="the main image of the article"
-                      style="max-height:100px; max-width: 100px;display: block;margin-left: auto; margin-right: auto;"
-                    />
-                  </div>
-                  <!--title / headline-->
-                  <div class="card-body" style="height: 200px">
-                    <a
-                      href={post.url}
-                      class="card-title font-headliner card-link"
-                    >
-                      {post.frontmatter.title}
-                    </a>
-                    <p class="p-4 text-sm">
-                      {post.frontmatter.description}
-                    </p>
-                  </div>
-                  <br />
-                  <!--author of article -->
-                  <p class="font-bold font-primary">
-                      <span class="dark:font-medium font-normal">by </span>{post.frontmatter.author}
-                    </p>
-                  <div class="float-container">
-                    <!--date / last updated-->
-                    <span class="float-child">
-                      
-                      <time
-                        datetime={post.frontmatter.pubDate}
-                        style="font-size: 12px"
+                <a href={post.url}>
+                  <div class="card p-4" style="width: 300px;">
+                    <!--image of article-->
+                    <div style="justify-content:center">
+                      <img
+                        src={post.frontmatter.heroImage}
+                        alt="the main image of the article"
+                        style="max-height:100px; max-width: 100px;display: block;margin-left: auto; margin-right: auto;"
+                      />
+                    </div>
+                    <!--title / headline-->
+                    <div class="card-body" style="height: 200px; text-align: center">
+                      <p
+                        class="card-title font-headliner card-link"
                       >
-                        {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                          "en-us",
-                          {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                          }
-                        )}
+                        {post.frontmatter.title}
+                      </p>
+                      <p class="p-4 text-sm">
+                        {post.frontmatter.description}
+                      </p>
+                    </div>
+                    <br />
+                    <!--author of article -->
+                    <p class="font-bold font-primary">
+                        <span class="dark:font-medium font-normal">by </span>{post.frontmatter.author}
+                      </p>
+                    <div class="float-container">
+                      <!--date / last updated-->
+                      <span class="float-child">
+                        
+                        <time
+                          datetime={post.frontmatter.pubDate}
+                          style="font-size: 12px"
+                        >
+                          {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                            "en-us",
+                            {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                            }
+                          )}
 
-                      </time>
-                    </span>
-                    <!--star rating system-->
-                    <StarRater numOfStars={post.frontmatter.rating}/>
+                        </time>
+                      </span>
+                      <!--star rating system-->
+                      <StarRater numOfStars={post.frontmatter.rating}/>
 
+                    </div>
                   </div>
-                </div>
+                </a>
               </li>
 
             ))
@@ -94,7 +95,10 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
       .checked {
          color: darkgoldenrod;
       }
-      
+      a {
+        color: black;
+        text-decoration: none;
+      }
     </style>
     
   </body>
