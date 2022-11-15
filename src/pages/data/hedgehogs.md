@@ -2,10 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Hedgehogs"
 author: "Tristan Winata"
-description: ""
+description: "prime spiky bois"
 pubDate: "11/12/2022"
 updatedDate: "Nov 12 2022"
-heroImage: "/PorkysPotOfPollution/HedgehogIcon.png"
+heroImage: "/PorkysPotOfPollution/realHedgehog.png"
 rating: 5
 ---
 

@@ -33,26 +33,24 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
               <li>
                 <a href={post.url}>
                   <div class="card p-4" style="width: 300px;">
-                    <!--image of article-->
-                    <div style="justify-content:center">
-                      <img
-                        src={post.frontmatter.heroImage}
-                        alt="the main image of the article"
-                        style="max-height:100px; max-width: 100px;display: block;margin-left: auto; margin-right: auto;"
-                      />
-                    </div>
+                    
                     <!--title / headline-->
                     <div class="card-body" style="height: 200px; text-align: center">
-                      <p
-                        class="card-title font-headliner card-link"
+                      <p  style="font-size: 30px"
+                        class="card-title font-headliner card-link dark:font-semibold"
                       >
                         {post.frontmatter.title}
                       </p>
-                      <p class="p-4 text-sm">
-                        {post.frontmatter.description}
-                      </p>
+                      <!--image of article-->
+                    <div style="justify-content:center" class="circular--landscape">
+                      <img
+                        
+
+                        src={post.frontmatter.heroImage}
+                        alt="the main image of the article"
+                      />
                     </div>
-                    <br />
+                    </div>
                     <!--author of article -->
                     <p class="font-bold font-primary">
                         <span class="dark:font-medium font-normal">by </span>{post.frontmatter.author}
@@ -99,6 +97,9 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
         color: black;
         text-decoration: none;
       }
+      .circular--landscape { display: inline-block; position: relative; width: 120px; height: 120px; overflow: hidden; border-radius: 50%; } .circular--landscape img { width: auto; height: 100%; margin-left: -0px; }
+
+
     </style>
     
   </body>
