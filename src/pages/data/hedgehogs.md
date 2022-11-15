@@ -5,7 +5,7 @@ author: "Tristan Winata"
 description: "prime spiky bois"
 pubDate: "11/12/2022"
 updatedDate: "Nov 12 2022"
-heroImage: "/PorkysPotOfPollution/realHedgehog.png"
+heroImage: "/PorkysPotOfPollution/realHedgehog2.png"
 rating: 5
 ---
 
