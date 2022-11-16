@@ -27,60 +27,66 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
   <body>
     <main class="bg-theme-darkRed">
       <section class="m-auto">
-        <ul class="grid grid-cols-3 portrait:grid-cols-1 p-4">
+        <ul class="grid grid-cols-3 portrait:grid-cols-1 p-4 superGrid">
           {
             posts.map((post) => (
               <li>
-                <a href={post.url}>
                   <div class="card p-4" style="width: 300px;">
                     
                     <!--title / headline-->
-                    <div class="card-body" style="height: 200px; text-align: center">
-                      <p  style="font-size: 30px"
-                        class="card-title font-headliner card-link dark:font-semibold"
-                      >
-                        {post.frontmatter.title}
-                      </p>
-                      <!--image of article-->
-                    <div style="justify-content:center" class="circular--landscape">
-                      <img
-                        
+                    <a href={post.url}>
 
-                        src={post.frontmatter.heroImage}
-                        alt="the main image of the article"
-                      />
-                    </div>
-                    </div>
-                    <!--author of article -->
-                    <p class="font-bold font-primary">
-                        <span class="dark:font-medium font-normal">by </span>{post.frontmatter.author}
-                      </p>
-                    <div class="float-container">
-                      <!--date / last updated-->
-                      <span class="float-child">
-                        
-                        <time
-                          datetime={post.frontmatter.pubDate}
-                          style="font-size: 12px"
+                      <div class="card-body" style="height: 200px; text-align: center">
+                        <p  style="font-size: 30px"
+                          class="card-title font-headliner card-link dark:font-semibold"
                         >
-                          {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                            "en-us",
-                            {
-                              year: "numeric",
-                              month: "short",
-                              day: "numeric",
-                            }
-                          )}
+                          {post.frontmatter.title}
+                        </p>
+                        <!--image of article-->
+                        <div style="justify-content:center" class="circular--landscape">
+                          <img
+                            
 
-                        </time>
-                      </span>
-                      <!--star rating system-->
-                      <StarRater numOfStars={post.frontmatter.rating}/>
+                            src={post.frontmatter.heroImage}
+                            alt="the main image of the article"
+                          />
+                        </div>
 
-                    </div>
+                      </div>
+
+                      <!--author of article -->
+                      <p class="font-bold font-primary">
+                          <span class="dark:font-medium font-normal">by </span>{post.frontmatter.author}
+                        </p>
+                      <div class="float-container">
+                        <!--date / last updated-->
+                        <span class="float-child">
+                          
+                          <time
+                            datetime={post.frontmatter.pubDate}
+                            style="font-size: 12px"
+                          >
+                            {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                              "en-us",
+                              {
+                                year: "numeric",
+                                month: "short",
+                                day: "numeric",
+                              }
+                            )}
+
+                          </time>
+                        </span>
+                        <!--star rating system-->
+                        <StarRater numOfStars={post.frontmatter.rating}/>
+
+                      </div>
+                    </a>
+
                   </div>
-                </a>
+                <br>
               </li>
+              
 
             ))
           }
@@ -92,6 +98,12 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
     <style>
       .checked {
          color: darkgoldenrod;
+      }
+      .superGrid{
+        
+        width: 1050px;
+        position:relative;
+        left:calc(50% - 525px);
       }
       a {
         color: black;
