@@ -97,6 +97,14 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
     <Footer />
     
     <style>
+      .card{
+        transition: transform 250ms;
+
+      }
+      .card:hover {
+        z-index: 10;
+        transform: scale(1.1);
+      }
       .checked {
          color: darkgoldenrod;
       }
