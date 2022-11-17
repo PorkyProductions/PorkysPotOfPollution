@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "../components/footer.svelte";
 import StarRater from "../components/starRater.svelte";
-//import 'font-awesome/css/font-awesome.css'// This isn't working for me. Causing error
+import 'font-awesome/css/font-awesome.css'// This isn't working for me. Causing error
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
   (a, b) =>
@@ -21,7 +21,8 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
       description={"The Blog of Porkys Pot of Pollution"}
     />
     <!--placeholder because importing causes error right now -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- USE NPM INSTALL -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
   </head>
   <body>
@@ -30,7 +31,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
         <ul class="grid grid-cols-3 portrait:grid-cols-1 p-4 superGrid">
           {
             posts.map((post) => (
-              <li>
+              <div>
                   <div class="card p-4" style="width: 300px;">
                     
                     <!--title / headline-->
@@ -85,7 +86,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
 
                   </div>
                 <br>
-              </li>
+              </div>
               
 
             ))
@@ -110,7 +111,9 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
         text-decoration: none;
       }
       .circular--landscape { display: inline-block; position: relative; width: 170px; height: 120px; overflow: hidden; border-radius: 50%; } .circular--landscape img { width: auto; height: 100%; margin-left: -0px; }
-
+       li {
+        list-style-type: none;
+       }
 
     </style>
     
