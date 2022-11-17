@@ -6,6 +6,9 @@ html, body {
 	background: #fff;
 	color: #000;
 }
+a{
+	text-decoration: underline;
+}
 	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
 	
 body {
@@ -133,6 +136,28 @@ blockquote {
 	blockquote {
 		position: relative;
 		margin: 80px;
+		width: 400px;
+		padding-left: 40px;
+		border-left: 2px solid hsl(0, 0%, 100%);
+	}
+	@media (orientation: portrait) {
+		blockquote {
+			position: relative;
+			margin-top: 80px;
+			margin-bottom: 80px;
+			width: 400px;
+			padding-left: 40px;
+			border-left: 2px solid hsl(0, 0%, 100%);
+		}
+	}
+}
+
+
+@media (orientation: portrait) {
+	blockquote {
+		position: relative;
+		margin-top: 80px;
+		margin-bottom: 80px;
 		width: 400px;
 		padding-left: 40px;
 		border-left: 2px solid hsl(0, 0%, 100%);

@@ -7,7 +7,6 @@ export interface Props {
 const { title, description } = Astro.props;
 import "../styles/global.css";
 import Nav from "../components/nav.svelte";
-import Footer from "../components/footer.svelte";
 import { SEO } from "astro-seo";
 ---
 
@@ -16,7 +15,7 @@ import { SEO } from "astro-seo";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/HedgehogIcon.png" />
+    <link rel="icon" type="image/svg+xml" href="/PorkysPotOfPollution//HedgehogIcon.png" />
     <meta name="generator" content={Astro.generator} />
     <SEO
       title={title}
@@ -26,10 +25,14 @@ import { SEO } from "astro-seo";
       nofollow={false}
       openGraph={
 		{
+      image: {
+        url: "https://porkyproductions.github.io/PorkysPotOfPollution/logo.png",
+        alt: "A poorly drawn hedgehog, with a basket next to them with some coming out of it, implying the buring of fossil fuels."
+      },
 			basic: {
 				title: title,
 				type: "website",
-				image: "/logo.png",
+				image: "/PorkysPotOfPollution/logo.png",
 				url: Astro.request.url
 			},
 			optional: {
@@ -38,7 +41,7 @@ import { SEO } from "astro-seo";
 				siteName: "Porky's Pot of Pollution"
 			}
 		}
-	  }
+	}
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +51,7 @@ import { SEO } from "astro-seo";
     />
   </head>
   <body>
-    <Nav />
+    <Nav client:load />
     <slot />
   </body>
 </html>

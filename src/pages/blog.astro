@@ -90,7 +90,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
               
 
             ))
-          }
+            }
         </ul>
       </section>
     </main>
@@ -109,10 +109,15 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
          color: darkgoldenrod;
       }
       .superGrid{
-        
         width: 1050px;
         position:relative;
         left:calc(50% - 525px);
+      }
+      @media (orientation: portrait) {
+        .superGrid {
+          width: auto;
+          position: unset;
+        }
       }
       a {
         color: black;
