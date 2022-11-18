@@ -1,11 +1,11 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Electric Vehicles"
+title: "EV"
 author: "Tristan Winata"
 description: "Electric fuel based transportation devices"
 pubDate: "11/17/2022"
 updatedDate: "Nov 17 2022"
-heroImage: "/PorkysPotOfPollution/realHedgehog2.png"
+heroImage: "/PorkysPotOfPollution/tesla.png"
 rating: 4
 ---
 
