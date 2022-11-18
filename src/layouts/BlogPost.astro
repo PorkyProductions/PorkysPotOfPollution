@@ -20,10 +20,7 @@ const {
 } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<Layout title={title} description={description} />
-	</head>
+<Layout title={title} description={description} />
 
 	<body>
 		<main>
@@ -38,11 +35,13 @@ const {
 					/>
 				)}
 				<h1 class="font-bold font-headliner text-3xl p-4 underline underline-offset-1">{title}</h1>
-				<h1 class="font-semibold font-primary text-2xl pl-4"> by {author}</h1>
+				<h1 class="font-semibold font-primary text-2xl pl-4"><span class="font-normal">by</span> {author}</h1>
 				{pubDate && <time class="p-4">{pubDate}</time>}
-				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+				{updatedDate && <div class="p-4">Last updated on <time>{updatedDate}</time></div>}
 				<hr/>
-				<slot />
+				<div class="font-primary">
+					<slot />
+				</div>
 			</article>
 		</main>
 		<style>
@@ -51,5 +50,4 @@ const {
 				margin: 1rem 0;
 			}
 		</style>
-	</body>
-</html>
+</body>
