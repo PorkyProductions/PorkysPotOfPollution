@@ -7,6 +7,7 @@ pubDate: "11/16/2022"
 updatedDate: "Nov 16 2022"
 heroImage: "/PorkysPotOfPollution/almondjoy.png"
 rating: 1
+stampOfApproval: false
 ---
 
 # Almond Joy

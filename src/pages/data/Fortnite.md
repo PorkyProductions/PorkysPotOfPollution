@@ -7,6 +7,7 @@ pubDate: "11/15/2022"
 updatedDate: "Nov 15 2022"
 heroImage: "/PorkysPotOfPollution/fortniteScreen.png"
 rating: 2
+stampOfApproval: false
 ---
 
 # Fortnite

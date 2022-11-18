@@ -7,6 +7,7 @@ pubDate: "11/17/2022"
 updatedDate: "Nov 17 2022"
 heroImage: "/PorkysPotOfPollution/tesla.png"
 rating: 4
+stampOfApproval: true
 ---
 
 # Electric Vehicles (EV)

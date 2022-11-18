@@ -7,6 +7,7 @@ pubDate: "11/17/2022"
 updatedDate: "Nov 17 2022"
 heroImage: "/PorkysPotOfPollution/java.jpg"
 rating: 2
+stampOfApproval: false
 ---
 
 # Java: An outdated, object oriented language for writing antiquiated, instant-legacy code.

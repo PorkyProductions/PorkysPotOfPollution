@@ -7,6 +7,7 @@ pubDate: "8/11/2022"
 updatedDate: "Oct 11 2022"
 heroImage: "/PorkysPotOfPollution/loremipsum.png"
 rating: 4
+stampOfApproval: false
 ---
 
 # TEST TEST TEST
