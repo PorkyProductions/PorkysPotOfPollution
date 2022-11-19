@@ -1,27 +1,33 @@
 <script>
     import stars from 'bootstrap-icons/icons/stars.svg'
 </script>
-<div class="flex content-center justify-center">
-    <span>
-        <img id="stars" src={stars} alt="stars">
-    </span>
+<div class="super flex content-center justify-center absolute">
+    
+    <img id="stars" src={stars} alt="stars">
+    &nbsp
     <span class="text-sm">
-        Approved by Porky
+        Porky Approved
     </span>
-    &nbsp;
-    <span>
-        <img id="porky" src="/PorkysPotOfPollution/HedgehogIconSlim.png" alt="Porky">
-    </span>
+    
 </div>
 
 <style> 
+    .super{
+        bottom: 270px;
+        right: 180px;
+        transform: rotate(-20deg);
+        background-color: yellow;
+        border-radius: 30px;
+        border: 3px solid black;
+        padding:10px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 * {
     text-decoration: none;
 }
     #stars {
-        width: 2vw;
+        width: 180px;
     }
-    #porky {
-        width: 2vw
-    }
+    
 </style>
