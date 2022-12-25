@@ -7,7 +7,7 @@ html, body {
 	color: #000;
 }
 a{
-	text-decoration: underline;
+	text-decoration: none;
 }
 	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
 	
