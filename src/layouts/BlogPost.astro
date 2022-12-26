@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
-import '../styles/blog.css'
+import '../styles/blog.scss'
+import 'bootstrap/dist/css/bootstrap-reboot.css'
 import Nav from "../components/nav.svelte";
 
 export interface Props {
@@ -23,7 +24,7 @@ const {
 <Layout title={title} description={description} />
 
 	<body>
-		<main>
+		<main class="dark:bg-black dark:text-white">
 			<article class="p-10">
 				{heroImage && (
 					<img

@@ -33,7 +33,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
                   <div class="card p-4" style="width: 300px;">
                     
                     <!--title / headline-->
-                    <a href={post.url}>
+                    <a href={post.url} class="text-black no-underline hover:text-theme-fire hover:underline">
 
                       <div class="card-body" style="height: 200px; text-align: center">
                         <p  style="font-size: 30px"

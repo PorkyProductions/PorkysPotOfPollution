@@ -26,7 +26,7 @@ li {
 article, aside, audio, 
 footer, header, nav, section, video {
 	display: block; 
-	}
+}
 	
 	/* ensures that older browsers will display HTML5 elements correctly */
 	
@@ -98,9 +98,10 @@ input:required:after {
 	content: " *";
 }
 	/* sets up required form fields with the conventional following red asterix */
-input[type="email"]:invalid { 
+input[type="email"] {
+	&:invalid { 
 	background: #f00;
-}
+}}
 	/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
 	
 .right { 
