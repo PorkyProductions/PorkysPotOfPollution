@@ -24,7 +24,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
 
   </head>
   <body>
-    <main style="background-color:peru;">
+    <main class="bg-theme-coral dark:bg-theme-darkRed">
       <section class="m-auto">
         <ul class="grid grid-cols-3 portrait:grid-cols-1 p-4 superGrid">
           {
@@ -110,7 +110,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
       }
       .superGrid{
         width: 1050px;
-        position:relative;
+        position: relative;
         left:calc(50% - 525px);
       }
       @media (orientation: portrait) {
