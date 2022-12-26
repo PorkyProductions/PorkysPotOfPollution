@@ -4,7 +4,7 @@ title: "About Me"
 author: "Porky"
 description: "Learn about Porky Himself. Also why this website exists"
 updatedDate: "Oct 11 2022"
-heroImage: "/logo.png"
+heroImage: "/PorkysPotOfPollution/logo.png"
 ---
 
 # The Porky Origin Story
