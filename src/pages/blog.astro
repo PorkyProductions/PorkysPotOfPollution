@@ -30,7 +30,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
           {
             posts.map((post) => (
               <div>
-                  <div class="card p-4" style="width: 300px;">
+                  <div class="card card-transform p-4" style="width: 300px;">
                     
                     <!--title / headline-->
                     <a href={post.url} class="text-black no-underline hover:text-theme-fire hover:underline">
@@ -48,6 +48,7 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
 
                             src={post.frontmatter.heroImage}
                             alt="the main image of the article"
+                            class="card-img-top"
                           />
                         </div>
 
@@ -97,9 +98,8 @@ const posts = (await Astro.glob("./data/*.{md,mdx,markdown}")).sort(
     <Footer />
     
     <style>
-      .card{
+      .card-transform {
         transition: transform 250ms;
-
       }
       .card:hover {
         z-index: 10;
